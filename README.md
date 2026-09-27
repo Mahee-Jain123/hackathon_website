@@ -1,4 +1,4 @@
-Matrix Vibe-Coding Website 1
+
 # Hackathon Website Backend
 
 Backend API for a hackathon/team-registration platform built with **Node.js, Express.js, MongoDB, JWT authentication, bcrypt, and Zod**.
