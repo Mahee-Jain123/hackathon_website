@@ -360,6 +360,98 @@ Validation includes checks such as:
 Invalid requests are rejected instead of being directly inserted into MongoDB.
 
 ---
+Installation
+1. Clone the repository
+git clone https://github.com/Mahee-Jain123/hackathon_website.git
+2. Enter the project
+cd hackathon_website
+3. Install dependencies
+npm install
+4. Configure environment variables
+
+Create:
+
+.env
+
+and add your MongoDB connection string, JWT secret, and port.
+
+5. Start the server
+node index.js
+
+The server runs on:
+
+http://localhost:5000
+Testing
+
+The API can be tested using tools such as:
+
+Thunder Client
+Postman
+cURL
+Basic test flow
+Start server
+       ↓
+2. Register user
+       ↓
+3. Login
+       ↓
+4. Copy JWT
+       ↓
+5. Send authenticated request
+       ↓
+6. Register team
+       ↓
+7. Create/use admin account
+       ↓
+8. Login as admin
+       ↓
+9. Access GET /api/teams
+Security
+
+The project currently implements several basic security measures:
+
+Password hashing using bcrypt
+JWT authentication
+Role-based authorization
+Environment variables for secrets
+Input validation with Zod
+Admin-only access to team information
+Unique user email/username constraints
+Unique team name constraint
+Current Architecture
+                ┌──────────────────┐
+                │     Frontend     │
+                └────────┬─────────┘
+                         │
+                         ▼
+                ┌──────────────────┐
+                │   Express API    │
+                └────────┬─────────┘
+                         │
+              ┌──────────┴──────────┐
+              │                     │
+              ▼                     ▼
+       Authentication          Team Routes
+              │                     │
+              ▼                     ▼
+          JWT/Bcrypt            Validation
+                                    │
+                                    ▼
+                              Controllers
+                                    │
+                                    ▼
+                                Mongoose
+                                    │
+                                    ▼
+                               MongoDB Atlas
+Author
+
+Mahee Jain
+
+GitHub: Mahee-Jain123
+
+Repository: hackathon_website
+
 
 
 
