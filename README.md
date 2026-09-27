@@ -361,17 +361,5 @@ Invalid requests are rejected instead of being directly inserted into MongoDB.
 
 ---
 
-## Environment Variables
 
-Create a `.env` file in the project root.
-
-Example:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-```
-
-Do **not** commit your `.env` file to G
 
