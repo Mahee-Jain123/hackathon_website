@@ -1,4 +1,3 @@
-
 # Hackathon Website Backend
 
 Backend API for a hackathon/team-registration platform built with **Node.js, Express.js, MongoDB, JWT authentication, bcrypt, and Zod**.
@@ -360,36 +359,86 @@ Validation includes checks such as:
 Invalid requests are rejected instead of being directly inserted into MongoDB.
 
 ---
-Installation
-1. Clone the repository
+
+## Environment Variables
+
+Create a `.env` file in the project root.
+
+Example:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+Do **not** commit your `.env` file to GitHub.
+
+The `.gitignore` should contain:
+
+```text
+node_modules/
+.env
+```
+
+---
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/Mahee-Jain123/hackathon_website.git
-2. Enter the project
+```
+
+### 2. Enter the project
+
+```bash
 cd hackathon_website
-3. Install dependencies
+```
+
+### 3. Install dependencies
+
+```bash
 npm install
-4. Configure environment variables
+```
+
+### 4. Configure environment variables
 
 Create:
 
+```text
 .env
+```
 
 and add your MongoDB connection string, JWT secret, and port.
 
-5. Start the server
+### 5. Start the server
+
+```bash
 node index.js
+```
 
 The server runs on:
 
+```text
 http://localhost:5000
-Testing
+```
+
+---
+
+## Testing
 
 The API can be tested using tools such as:
 
-Thunder Client
-Postman
-cURL
-Basic test flow
-Start server
+* Thunder Client
+* Postman
+* cURL
+
+### Basic test flow
+
+```text
+1. Start server
        ↓
 2. Register user
        ↓
@@ -406,19 +455,28 @@ Start server
 8. Login as admin
        ↓
 9. Access GET /api/teams
-Security
+```
+
+---
+
+## Security
 
 The project currently implements several basic security measures:
 
-Password hashing using bcrypt
-JWT authentication
-Role-based authorization
-Environment variables for secrets
-Input validation with Zod
-Admin-only access to team information
-Unique user email/username constraints
-Unique team name constraint
-Current Architecture
+* Password hashing using bcrypt
+* JWT authentication
+* Role-based authorization
+* Environment variables for secrets
+* Input validation with Zod
+* Admin-only access to team information
+* Unique user email/username constraints
+* Unique team name constraint
+
+---
+
+## Current Architecture
+
+```text
                 ┌──────────────────┐
                 │     Frontend     │
                 └────────┬─────────┘
@@ -444,14 +502,35 @@ Current Architecture
                                     │
                                     ▼
                                MongoDB Atlas
-Author
+```
 
-Mahee Jain
+---
 
-GitHub: Mahee-Jain123
+## Project Status
 
-Repository: hackathon_website
+### Implemented
 
+* [x] Express server
+* [x] MongoDB connection
+* [x] User model
+* [x] Team model
+* [x] User registration
+* [x] User login
+* [x] Password hashing
+* [x] JWT authentication
+* [x] Role-based authorization
+* [x] Team registration
+* [x] Zod team validation
+* [x] Admin-only team access
+* [x] Environment configuration
 
+---
 
+## Author
+
+**Mahee Jain**
+
+GitHub: [Mahee-Jain123](https://github.com/Mahee-Jain123)
+
+Repository: [hackathon_website](https://github.com/Mahee-Jain123/hackathon_website)
 
